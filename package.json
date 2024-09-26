@@ -1,0 +1,29 @@
+{
+    "name": "angular-xmc",
+    "version": "22.2.0-canary",
+    "description": "App root for Angular XMCloud setup",
+    "scripts": {
+        "start": "cd ./proxy && npm run start && cd ..",
+        "build": "cd ./proxy && npm run build-all && cd ..",
+        "install": "cd ./proxy && npm run install-all && cd ..",
+        "netlify-init": "netlify init",
+        "deploy-netlify": "netlify build && netlify deploy --prod"
+    },
+    "private": true,
+    "author": {
+        "name": "Sitecore Corporation",
+        "url": "https://jss.sitecore.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sitecore/jss.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sitecore/jss/issues"
+    },
+    "homepage": "https://jss.sitecore.com",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "netlify-cli": "^17.36.2"
+    }
+}

@@ -1,0 +1,13 @@
+[functions]
+  directory = "proxy/src"
+  external_node_modules = ["express","@sitecore-jss/sitecore-jss-proxy", "dotenv", "http-proxy-middleware"]
+  node_bundler = "esbuild"
+  included_files = ["proxy/dist/**", "proxy/dist/browser/**"]
+[[redirects]]
+  force = true
+  from = "/*"
+  status = 200
+  to = "/.netlify/functions/index/:splat"
+[build]
+  command = "npm run build"
+  publish = "proxy/dist"
